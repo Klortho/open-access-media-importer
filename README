@@ -8,11 +8,11 @@ The aim of this project is to write a tool that would:
 Wiki page: http://en.wikiversity.org/wiki/User:OpenScientist/Open_grant_writing/Wissenswert_2011
 
 Feature-complete commands:
-    oa-get [download-metadata|download-media] [dummy|pubmed]
-    oa-cache [clear-metadata|clear-media|list-articles|find-media] [dummy|pubmed]
+    oa-get [download-metadata|download-media] [dummy|pmc]
+    oa-cache [clear-metadata|clear-media|list-articles|find-media] [dummy|pmc]
 
 Feature-incomplete commands:
-    oa-cache convert-media [dummy|pubmed]
+    oa-cache convert-media [dummy|pmc]
 
 Dependencies:
     python-gst0.10 <http://gstreamer.freedesktop.org/modules/gst-python.html>

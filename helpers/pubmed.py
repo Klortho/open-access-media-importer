@@ -5,7 +5,7 @@ from xml.etree.ElementTree import ElementTree
 
 def find_supplementary_materials(content):
     """
-    Parses PubMed XML and returns supplementary materials.
+    Parses PMC XML and returns supplementary materials.
     """
     result = {}
     result['materials'] = []

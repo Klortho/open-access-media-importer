@@ -19,7 +19,7 @@ BUFSIZE = 33554432
 
 def download_metadata(target_directory):
     """
-    Downloads files from PubMed FTP server into given directory.
+    Downloads files from PMC FTP server into given directory.
     """
     urls = [
         'ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/articles.A-B.tar.gz',
@@ -397,7 +397,7 @@ def _get_article_license_url(tree):
             return license_url_equivalents[license_text]
         else:
             # FIXME: revert this to an exception some time in the future
-            filename = '/tmp/pubmed-' + md5(license_text).hexdigest()
+            filename = '/tmp/pmc-' + md5(license_text).hexdigest()
             with open(filename, 'w') as f:
                 f.write(license_text)
                 stderr.write("Unknown license statement:\n%s\n" % \

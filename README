@@ -1,17 +1,31 @@
-The aim of this project is to write a tool that would:
-* regularly spider PubMed Central to locate audio and video files published in the supplementary materials of CC BY-licensed articles in the Open subset
-* convert these files to OGG
-* upload them to Wikimedia Commons, along with the respective metadata
-* provide for easy extension to other CC-BY sources, beyond PubMed Central
-* (possibly) suggest Wikipedia articles for which the video might be relevant
+This set of tools provides the ability to harvest media files from resources
+published with liberal reuse licenses, and upload them to Wikimedia Commons
+so that they are available for reuse by the various Wikimedia projects.
 
-Wiki page: http://en.wikiversity.org/wiki/User:OpenScientist/Open_grant_writing/Wissenswert_2011
+For example, it can be used to:
 
-Feature-complete commands:
+  * regularly access PubMed Central (PMC) to locate audio and video files
+    published in the supplementary materials of CC BY-licensed articles in the
+    Open Access subset
+  * convert these files to OGG
+  * upload them to Wikimedia Commons, along with the respective metadata
+
+These should also allow easy extension to other CC-BY sources, besides PMC.
+A possible future enhancement would be for it to suggest Wikipedia articles for
+which a video might be relevant.
+
+Documentation is available here:
+http://en.wikiversity.org/wiki/User:OpenScientist/Open_grant_writing/Wissenswert_2011/Documentation
+
+Status:  Alpha.
+
+Commands:
+  Feature-complete commands:
     oa-get [download-metadata|download-media] [dummy|pmc]
     oa-cache [clear-metadata|clear-media|list-articles|find-media] [dummy|pmc]
+    oa-put upload-media [dummy|pmc]
 
-Feature-incomplete commands:
+  Feature-incomplete commands:
     oa-cache convert-media [dummy|pmc]
 
 Dependencies:
@@ -21,7 +35,16 @@ Dependencies:
     python-xdg <http://freedesktop.org/wiki/Software/pyxdg>
     python-wikitools <http://code.google.com/p/python-wikitools/>
 
-To use the upload feature of oa-put, copy the userconfig.example file to
-“$HOME/config/open-access-media-importer/userconfig”.
+Getting started:
+
+  * Download the repository as a zip file, and extract it to the directory of
+    your choice
+  * Copy the userconfig.example file into
+    ~/.config/open-access-media-importer/userconfig
+  * Edit that to point to a wiki of your choice, and add username and password.
+
+  * To get all of the metadata for the articles in the PMC OA Subset:
+      oa-get download-metadata pmc
+  * Next step:  ???
 
 A screencast showing usage can be played back with “ttyplay screencast”.
